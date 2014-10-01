@@ -1,0 +1,215 @@
+$brand-color: #dd0330;
+body {
+	background-image: url(../img/incs-landing.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.section {
+	clear: both;
+}
+
+.text-center {text-align: center;}
+
+.headline {
+	margin: -20px 1em 1em;
+	img {
+		width: 100%;
+	}
+	.hide-xs {
+		display: none;
+	}
+	.show-xs {
+		display: block;
+	}
+}
+
+.timer {
+	position: relative;
+	height: 340px;
+	.timer-wrapper {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	.number {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+		font-size: 115px;
+		color: $brand-color;
+		font-family: sans-serif;
+		line-height: 280px;
+	}
+	.img {
+		height: 340px;
+	}
+	.text {
+		font-family: sans-serif;
+		font-size: 28px;
+		position: absolute;
+		text-align: center;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+.brand {
+	margin: 3em 0 0;
+	img {
+	}
+}
+
+.signoff {
+	margin: 3em 0;
+	p {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-style: italic;
+		font-size: 18px;
+		color: #333;
+	}
+	.social-buttons {
+		padding-left: 0;
+		margin-left: -5px;
+		list-style: none;
+		li {
+			display: inline-block;
+			padding-right: 5px;
+			padding-left: 5px;
+			a {
+				display: block;
+				width: 32px;
+				height: 33px;
+				background-image: url(../img/social-button-twitter.png);
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				border-radius: 5px;
+				&:hover {
+					background-color: rgba($brand-color, 0.6);
+				}
+			}
+				&.twitter a {background-image: url(../img/social-button-twitter.png)}
+				&.facebook a {background-image: url(../img/social-button-facebook.png)}
+				&.instagram a {background-image: url(../img/social-button-instagram.png)}
+				&.google-plus a {background-image: url(../img/social-button-google-plus.png)}
+		}
+	}
+}
+
+/*
+ * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+ */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+	/* Styles */
+	.headline{
+		.hide-xs {
+			display: none;
+		}
+		.show-xs {
+			display: block;
+		}
+	}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+	/* Styles */
+	.headline{
+		.hide-xs {
+			display: block;
+		}
+		.show-xs {
+			display: none;
+		}
+	}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+	/* Styles */
+	.headline{
+		.hide-xs {
+			display: block;
+		}
+		.show-xs {
+			display: none;
+		}
+	}
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+	/* Styles */
+	.headline{
+		.hide-xs {
+			display: block;
+		}
+		.show-xs {
+			display: none;
+		}
+	}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+	/* Styles */
+	.headline{
+		.hide-xs {
+			display: block;
+			max-width: 1000px;
+			margin: auto;
+		}
+		.show-xs {
+			display: none;
+		}
+	}
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+	/* Styles */
+	.headline{
+		.hide-xs {
+			display: block;
+		}
+		.show-xs {
+			display: none;
+		}
+	}
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+	/* Styles */
+	.headline{
+		.hide-xs {
+			display: none;
+		}
+		.show-xs {
+			display: block;
+		}
+	}
+}
