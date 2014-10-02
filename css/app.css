@@ -1,5 +1,6 @@
 body {
   background-image: url(../img/incs-landing.jpg);
+  background-color: #7d5936;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
@@ -11,13 +12,13 @@ body {
   text-align: center; }
 
 .headline {
-  margin: -20px 1em 1em; }
+  margin: -30px 1em 0; }
   .headline img {
     width: 100%; }
   .headline .hide-xs {
-    display: block; }
-  .headline .show-xs {
     display: none; }
+  .headline .show-xs {
+    display: block; }
 
 .timer {
   position: relative;
@@ -87,57 +88,29 @@ body {
       .signoff .social-buttons li.google-plus a {
         background-image: url(../img/social-button-google-plus.png); }
 
-/*
- * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
- */
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* Styles */
-  .headline .hide-xs {
-    display: none; }
-  .headline .show-xs {
-    display: block; } }
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Styles */
+@media (min-width: 768px) {
   .headline .hide-xs {
     display: block; }
   .headline .show-xs {
     display: none; } }
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* Styles */
-  .headline .hide-xs {
-    display: block; }
-  .headline .show-xs {
-    display: none; } }
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* Styles */
-  .headline .hide-xs {
-    display: block; }
-  .headline .show-xs {
-    display: none; } }
-/* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
-  /* Styles */
-  .headline .hide-xs {
-    display: block;
-    max-width: 1000px;
+@media (min-width: 992px) {
+  .headline img {
+    width: 50%;
     margin: auto; }
-  .headline .show-xs {
-    display: none; } }
-/* Large screens ----------- */
-@media only screen and (min-width: 1824px) {
-  /* Styles */
-  .headline .hide-xs {
-    display: block; }
-  .headline .show-xs {
-    display: none; } }
-/* iPhone 4 ----------- */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /* Styles */
-  .headline .hide-xs {
-    display: none; }
-  .headline .show-xs {
-    display: block; } }
+
+  .timer {
+    zoom: .75; }
+
+  .brand {
+    margin: 2em 0 0;
+    zoom: .75; }
+
+  .signoff {
+    margin: 1.5em 0; } }
+@media (min-width: 1200px) {
+  .headline img {
+    width: 70%;
+    margin: auto; }
+
+  .timer, .brand {
+    zoom: 1; } }

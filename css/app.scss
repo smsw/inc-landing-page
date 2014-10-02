@@ -13,7 +13,7 @@ body {
 .text-center {text-align: center;}
 
 .headline {
-	margin: -20px 1em 1em;
+	margin: -30px 1em 0;
 	img {
 		width: 100%;
 	}
@@ -103,113 +103,72 @@ body {
 	}
 }
 
-/*
- * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
- */
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-	/* Styles */
-	.headline{
-		.hide-xs {
-			display: none;
-		}
-		.show-xs {
-			display: block;
-		}
-	}
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+@media (min-width: $screen-sm-min) {
+  .headline{
+    .hide-xs {
+      display: block;
+    }
+    .show-xs {
+      display: none;
+    }
+  }
 }
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
-	/* Styles */
-	.headline{
-		.hide-xs {
-			display: block;
-		}
-		.show-xs {
-			display: none;
-		}
-	}
+@media (min-width: $screen-md-min) {
+  .headline {
+    img {
+      width: 50%;
+      margin: auto;
+    }
+  }
+  .timer {zoom: .75}
+  .brand {
+    margin: 2em 0 0;
+    zoom: .75;
+  }
+  .signoff {
+    margin: 1.5em 0;
+  }
 }
-
-/* iPads (landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-	/* Styles */
-	.headline{
-		.hide-xs {
-			display: block;
-		}
-		.show-xs {
-			display: none;
-		}
-	}
-}
-
-/* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-	/* Styles */
-	.headline{
-		.hide-xs {
-			display: block;
-		}
-		.show-xs {
-			display: none;
-		}
-	}
-}
-
-/* Desktops and laptops ----------- */
-@media only screen
-and (min-width : 1224px) {
-	/* Styles */
-	.headline{
-		.hide-xs {
-			display: block;
-			max-width: 1000px;
-			margin: auto;
-		}
-		.show-xs {
-			display: none;
-		}
-	}
-}
-
-/* Large screens ----------- */
-@media only screen
-and (min-width : 1824px) {
-	/* Styles */
-	.headline{
-		.hide-xs {
-			display: block;
-		}
-		.show-xs {
-			display: none;
-		}
-	}
-}
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-	/* Styles */
-	.headline{
-		.hide-xs {
-			display: none;
-		}
-		.show-xs {
-			display: block;
-		}
-	}
+@media (min-width: $screen-lg-min) {
+  .headline {
+    img {
+      width: 70%;
+      margin: auto;
+    }
+  }
+  .timer, .brand {zoom: 1}
 }
