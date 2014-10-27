@@ -1,10 +1,12 @@
 $(function(){
 
 	var currentTime = new Date(),
-		dayOfMonth = currentTime.getDate(),
-		deadLine = 29
-		daysToGo = deadLine - dayOfMonth;
+		day = currentTime.getDate(),
+		month = currentTime.getMonth() + 1,
+		start = new Date(2014, month, day),	// Now
+		end = new Date(2014, 11, 19),		// 19th Novemeber 2014
+		dr = moment.range(start, end);
 
-	$('.timer .number').html(daysToGo);
+	$('.timer .number').html(dr.diff('days'));
 
 });
